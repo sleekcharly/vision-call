@@ -24,7 +24,7 @@ const MeetingTypeList = () => {
     description: '',
     link: '',
   });
-  const [callDetails, setCallDetails] = useState<Call>();
+  const [callDetail, setCallDetail] = useState<Call>();
 
   const { toast } = useToast();
 
@@ -55,7 +55,7 @@ const MeetingTypeList = () => {
         },
       });
 
-      setCallDetails(call);
+      setCallDetail(call);
 
       if (!values.description) {
         router.push(`/meeting/${call.id}`);
@@ -70,7 +70,7 @@ const MeetingTypeList = () => {
     }
   };
 
-  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`;
+  const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -103,7 +103,7 @@ const MeetingTypeList = () => {
         className="bg-yellow-1"
       />
 
-      {!callDetails ? (
+      {!callDetail ? (
         <MeetingModal
           isOpen={meetingState === 'isScheduleMeeting'}
           onClose={() => setMeetingState(undefined)}
