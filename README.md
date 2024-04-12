@@ -8,7 +8,7 @@ It enables users to securely log in, create meetings, and access various meeting
 
 Try out the demo here: https://vision-call.vercel.app/
 
-![REACT_ADMIN_results_image](./public/images/vision_call.png)
+![VISION_CALL_results_image](./public/images/vision_call.png)
 
 ## Tech Stack
 
